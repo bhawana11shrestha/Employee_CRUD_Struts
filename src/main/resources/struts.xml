@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+    <!-- Struts constant to enable development mode -->
+    <constant name="struts.devMode" value="true" />
+
+    <!-- Define package -->
+    <package name="employee" extends="struts-default">
+
+        <!-- List employees -->
+        <action name="list" class="com.example.action.EmployeeAction" method="list">
+            <result>/pages/list.jsp</result>
+        </action>
+
+        <!-- Create or update employee -->
+        <action name="saveOrUpdate" class="com.example.action.EmployeeAction" method="saveOrUpdate">
+            <result type="redirectAction">list</result>
+        </action>
+
+        <!-- Edit employee -->
+        <action name="edit" class="com.example.action.EmployeeAction" method="edit">
+            <result>/pages/form.jsp</result>
+        </action>
+
+        <!-- Delete employee -->
+        <action name="delete" class="com.example.action.EmployeeAction" method="delete">
+            <result type="redirectAction">list</result>
+        </action>
+
+    </package>
+</struts>
