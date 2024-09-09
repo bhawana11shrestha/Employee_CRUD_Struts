@@ -8,7 +8,11 @@
     <constant name="struts.devMode" value="true" />
 
     <!-- Define package -->
-    <package name="employee" extends="struts-default">
+    <package name="employee" namespace="/" extends="struts-default">
+        <!-- Default action mapping for root URL -->
+        <action name="" class="com.example.action.EmployeeAction" method="list">
+            <result name="success">/pages/list.jsp</result>
+        </action>
 
         <!-- List employees -->
         <action name="list" class="com.example.action.EmployeeAction" method="list">

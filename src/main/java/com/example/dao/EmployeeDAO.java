@@ -65,7 +65,7 @@ public class EmployeeDAO {
     // Get all employees
     public List<Employee> getAll() {
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
-            Query<Employee> query = session.createQuery("from Employee", Employee.class);
+            Query<Employee> query = session.createQuery("from Employee order by id", Employee.class);
             return query.list();
         } catch (Exception e) {
             e.printStackTrace();

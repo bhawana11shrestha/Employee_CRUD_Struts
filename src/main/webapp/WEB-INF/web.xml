@@ -17,9 +17,9 @@
     <url-pattern>/*</url-pattern>
   </filter-mapping>
 
-  <!-- Welcome Page -->
-  <welcome-file-list>
-    <welcome-file>/pages/list.jsp</welcome-file>
-  </welcome-file-list>
+<!--  &lt;!&ndash; Welcome Page &ndash;&gt;-->
+<!--  <welcome-file-list>-->
+<!--    <welcome-file>/pages/list.jsp</welcome-file>-->
+<!--  </welcome-file-list>-->
 
 </web-app>

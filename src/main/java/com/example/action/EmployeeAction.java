@@ -24,13 +24,14 @@ public class EmployeeAction extends ActionSupport {
 
     // Create/Update Employee
     public String saveOrUpdate() {
-        if (id != null) {
+        if (employee.getId() != null) {  // Check if employee has an ID (existing employee)
             employeeDAO.update(employee);  // Update existing employee
         } else {
             employeeDAO.save(employee);  // Save new employee
         }
         return SUCCESS;  // Return success to load the list after saving
     }
+
 
     // Edit Employee
     public String edit() {

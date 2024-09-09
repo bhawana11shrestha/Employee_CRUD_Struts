@@ -9,8 +9,8 @@
 <h2>Employee Form</h2>
 
 <s:form action="saveOrUpdate" method="post">
-    <!-- Hidden field for the ID (needed for edit) -->
-    <s:hidden name="employee.id" />
+    <!-- Hidden field for Employee ID (for updating existing employee) -->
+    <s:hidden name="employee.id" value="%{employee.id}" />
 
     <!-- Input fields for employee details -->
     <label for="name">Name:</label>
